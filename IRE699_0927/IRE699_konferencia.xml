@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IRE699_konferenciaelőadások>
+    <konferencia>
+        <cim>Konferenciacím</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Gipsz Jakab</nev>
+                <lakcim>3535 Miskolc, Valahol út 3.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Gipsz Elek</nev>
+                <lakcim>3535 Miskolc, Valahol út 2.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Miskolci Egyetem</helyszin>
+        <eloado>
+            <nev>Előadó Jenő</nev>
+            <adoszam>123456789</adoszam>
+            <lakcim>3535 Miskolc, Valahol út 4.</lakcim>
+        </eloado>
+
+        <datum>2023.09.27</datum>
+
+    </konferencia>
+</IRE699_konferenciaelőadások>

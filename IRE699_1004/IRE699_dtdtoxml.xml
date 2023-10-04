@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE IRE699_dtdtoxml SYSTEM "IRE699_ertodtd.dtd">
+    <IRE699_dtdtoxml>
+
+        <A a="Aegy">
+            <b>
+                <x></x>
+                <y></y>
+            </b>
+            <c>
+                <d></d>
+                <e></e>
+            </c>
+        </A>
+        <B a="Begy" c="Aegy">
+            <b>
+                <x></x>
+                <y></y>
+            </b>
+        </B>
+        
+        <C a="Cegy">
+            <b></b>
+        </C>
+
+        <AB Aref="Aegy" Bref="Begy">
+            <c></c>
+        </AB>
+            
+    </IRE699_dtdtoxml>

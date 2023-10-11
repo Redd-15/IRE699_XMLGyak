@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="hallgato">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="hnev" type="xs:string" />
+                <xs:element name="szulev" type="xs:string" />
+                <xs:element name="szak">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="evf" type="xs:integer" use="required" />
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="kurzusok">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="kurzus" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="kurzusnev" type="xs:string" />
+                            <xs:element name="kredit" type="xs:string" />
+                            <xs:element name="hely" type="xs:string" />
+                            <xs:element name="idopont" type="xs:string" />
+                            <xs:element name="oktato" type="xs:string" minOccurs="0" />
+                            <xs:element name="oraado" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                        <xs:attribute name="id" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute ref="id" />
+            <xs:attribute ref="jovahagyas" />
+            <xs:attribute ref="nyelv" />
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:attribute name="tanev" />
+    <xs:attribute name="egyetem" type="xs:string" />
+    <xs:attribute name="id" />
+    <xs:attribute name="jovahagyas" type="xs:string" />
+    <xs:attribute name="nyelv" type="xs:string" />
+
+
+    <xs:element name="IRE699_kurzusfelvetel">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="hallgato" />
+                <xs:element name="kurzusok" />
+
+            </xs:sequence>
+            <xs:attribute ref="tanev" use="required" />
+            <xs:attribute ref="egyetem" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

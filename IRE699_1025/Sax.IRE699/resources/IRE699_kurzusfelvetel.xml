@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IRE699_kurzusfelvetel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" tanev="2023/23/1" egyetem="ME">
+
+    <hallgato>
+        <hnev>Sikora Dávid Ádám</hnev>
+        <szulev>2001</szulev>
+        <szak evf="5">Mérnökinformatikus</szak>
+    </hallgato>
+
+    <kurzusok>
+
+        <kurzus id="GEIAL333-B">
+            <kurzusnev>Web-es alkalmazások (Java)</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Online</hely>
+            <idopont>Kedd 14:00-16:00 </idopont>
+            <oraado>Selmeci Viktor</oraado>
+        </kurzus>
+
+        <kurzus id="GEIAL331-B">
+            <kurzusnev>Web technológiák 1</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXX ea.</hely>
+            <idopont>Hétfő 14:00-16:00 </idopont>
+            <oktato>Dr. Agárdi Anita</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAK130-B" jovahagyas="igen">
+            <kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXXII ea.</hely>
+            <idopont>Kedd 10:00-12:00 </idopont>
+            <oktato>Kunné Dr. Tamás Judit</oktato>
+            <oraado>Fazekas Levente</oraado>
+        </kurzus>
+
+        <kurzus id="GEIAL31H-B">
+            <kurzusnev>Szoftvertesztelés</kurzusnev>
+            <kredit>5</kredit>
+            <hely>In/103</hely>
+            <idopont>Hétfő 10:00-12:00 </idopont>
+            <oktato>Dr. Hornyák Olivér</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAK120-B" nyelv="angol">
+            <kurzusnev>Integrált vállalati rendszerek</kurzusnev>
+            <kredit>5</kredit>
+            <hely>X ea.-</hely>
+            <idopont>Szerda 12:00-14:00</idopont>
+            <oktato>Dr. Dadvandipour Samad</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAL332-B">
+            <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+            <kredit>5</kredit>
+            <hely>XXXII.</hely>
+            <idopont>Kedd 12:00-14:00 </idopont>
+            <oktato>Dr. Bednarik László</oktato>
+        </kurzus>
+
+    </kurzusok>
+</IRE699_kurzusfelvetel>

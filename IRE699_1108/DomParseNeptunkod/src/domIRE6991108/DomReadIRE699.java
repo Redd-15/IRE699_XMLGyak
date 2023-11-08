@@ -12,7 +12,7 @@ public class DomReadIRE699 {
     public static void main(String[] args) {
 
         try {
-            File xml = new File("resources/IRE699_orarend.xml");
+            File xml = new File("resources/orarendIRE699.xml");
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dbf.newDocumentBuilder();
             Document doc = builder.parse(xml);
@@ -29,8 +29,6 @@ public class DomReadIRE699 {
 class DomRead {
 
     private int indent = 0;
-
-
 
     public void printDocument(Document doc){
 

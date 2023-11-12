@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <!--Egyszerű tipusok-->
+
+    <xs:element name="szul_ev" type="xs:integer" />
+    <xs:element name="nev" type="xs:string" />
+    <xs:element name="tel_szam" type="xs:string" />
+    <xs:element name="marka" type="xs:string" />
+    <xs:element name="ferohely" type="xs:integer" />
+    <xs:element name="fogyasztas" type="xs:integer"/>
+    <xs:element name="utvonal_nev" type="xs:string" />
+    <xs:element name="tav_elo" type="xs:integer" />
+    <xs:element name="sorszam" type="xs:integer" />
+    <xs:element name="m_ferohely" type="xs:integer" />
+    <xs:element name="varos" type="xs:string" />
+    <xs:element name="utca" type="xs:string" />
+    <xs:element name="hazszam" type="xs:integer" />
+
+    <xs:element name="uzemanyag" type="uzemanyagTipus"/>
+    <xs:element name="rendszam" type="rendszamTipus"/>
+    <xs:element name="uzemanyag_szint" type="uzemanyag_szintTipus"/>
+    <xs:element name="indulasi_ido" type="indulasi_idoTipus"/>
+    <xs:element name="fedett" type="fedettTipus"/>
+    <xs:element name="tipus" type="tipusTipus"/>
+    
+    
+    <!--Saját tipusok-->
+
+    <xs:simpleType name="uzemanyagTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Elektromos"/>
+            <xs:enumeration value="Dízel"/>
+            <xs:enumeration value="Hibrid"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rendszamTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9]"/>
+            <xs:pattern value="[A-Z][A-Z][A-Z]-[0-9][0-9][0-9]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="uzemanyag_szintTipus">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="indulasi_idoTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9][0-9]:[0-9][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="fedettTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="N"/>
+            <xs:enumeration value="I"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Komplex tipusok-->
+
+    <xs:complexType name="tipusTipus">
+        <xs:sequence>
+            <xs:element ref="marka"/>
+            <xs:element ref="uzemanyag"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="soforTipus">
+        <xs:sequence>
+            <xs:element ref="szul_ev" maxOccurs="1"/>
+            <xs:element ref="tel_szam" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element ref="nev" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="skod" type="xs:integer" use="required" />
+        <xs:attribute name="lakhely" type="xs:integer" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="vezetiTipus">
+        <xs:attribute name="sofor" type="xs:integer" use="required" />
+        <xs:attribute name="busz" type="xs:integer" use="required" />
+    </xs:complexType>
+    
+    <xs:complexType name="buszTipus">
+        <xs:sequence>
+            <xs:element ref="tipus" maxOccurs="1"/>
+            <xs:element ref="ferohely" maxOccurs="1"/>
+            <xs:element ref="rendszam" maxOccurs="1"/>
+            <xs:element ref="uzemanyag_szint" maxOccurs="1"/>
+            <xs:element ref="fogyasztas" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="bkod" type="xs:integer" use="required" />
+        <xs:attribute name="jarat" type="xs:integer" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="jaratTipus">
+        <xs:sequence>
+            <xs:element ref="indulasi_ido"/>
+        </xs:sequence>
+        <xs:attribute name="jkod" type="xs:integer" use="required" />
+        <xs:attribute name="utvonal" type="xs:integer" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="utvonalTipus">
+        <xs:sequence>
+            <xs:element ref="utvonal_nev" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="utkod" type="xs:integer" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="megallasTipus">
+        <xs:sequence>
+            <xs:element ref="tav_elo" maxOccurs="1"/>
+            <xs:element ref="sorszam" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="utvonal" type="xs:integer" use="required" />
+        <xs:attribute name="megallo" type="xs:integer" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="megalloTipus">
+        <xs:sequence>
+            <xs:element ref="fedett" maxOccurs="1"/>
+            <xs:element ref="m_ferohely" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="mkod" type="xs:integer" use="required" />
+        <xs:attribute name="helyszin" type="xs:integer" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="helyszinTipus">
+        <xs:sequence>
+            <xs:element ref="varos" maxOccurs="1"/>
+            <xs:element ref="utca" maxOccurs="1"/>
+            <xs:element ref="hazszam" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="hkod" type="xs:integer" use="required" />
+    </xs:complexType>
+
+    <!--Gyökérelem elemei-->
+
+    <xs:element name="MVK_database">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Sofor" type="soforTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Vezeti" type="vezetiTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Busz" type="buszTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Jarat" type="jaratTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Utvonal" type="utvonalTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Megallas" type="megallasTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Megallo" type="megalloTipus" minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element name="Helyszin" type="helyszinTipus" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    
+
+    <!--Elsődleges kulcsok-->
+
+        <xs:key name="Sofor_kod">
+            <xs:selector xpath="Sofor"/>
+            <xs:field xpath="@skod"/>
+        </xs:key>
+        <xs:key name="Busz_kod">
+            <xs:selector xpath="Busz"/>
+            <xs:field xpath="@bkod"/>
+        </xs:key>
+        <xs:key name="Jarat_kod">
+            <xs:selector xpath="Jarat"/>
+            <xs:field xpath="@jkod"/>
+        </xs:key>
+        <xs:key name="Utvonal_kod">
+            <xs:selector xpath="Utvonal"/>
+            <xs:field xpath="@utkod"/>
+        </xs:key>
+        <xs:key name="Megallo_kod">
+            <xs:selector xpath="Megallo"/>
+            <xs:field xpath="@mkod"/>
+        </xs:key>
+        <xs:key name="Helyszin_kod">
+            <xs:selector xpath="Helyszin"/>
+            <xs:field xpath="@hkod"/>
+        </xs:key>
+
+        <!--Idegen kulcsok-->
+
+        <xs:keyref name="Lakhely_kulcs" refer="Helyszin_kod">
+            <xs:selector xpath="Sofor"/>
+            <xs:field xpath="@lakhely"/>
+        </xs:keyref>
+        <xs:keyref name="Vezeto_kulcs" refer="Sofor_kod">
+            <xs:selector xpath="Vezeti"/>
+            <xs:field xpath="@sofor"/>
+        </xs:keyref>
+        <xs:keyref name="Busz_kulcs" refer="Busz_kod">
+            <xs:selector xpath="Vezeti"/>
+            <xs:field xpath="@busz"/>
+        </xs:keyref>
+        <xs:keyref name="Jarat_kulcs" refer="Jarat_kod">
+            <xs:selector xpath="Busz"/>
+            <xs:field xpath="@jarat"/>
+        </xs:keyref>
+        <xs:keyref name="Utvonal_jarat_kulcs" refer="Utvonal_kod">
+            <xs:selector xpath="Jarat"/>
+            <xs:field xpath="@utvonal"/>
+        </xs:keyref>
+        <xs:keyref name="Utvonal_megallas_kulcs" refer="Utvonal_kod">
+            <xs:selector xpath="Megallas"/>
+            <xs:field xpath="@utvonal"/>
+        </xs:keyref>
+        <xs:keyref name="Megallo_kulcs" refer="Megallo_kod">
+            <xs:selector xpath="Megallas"/>
+            <xs:field xpath="@megallo"/>
+        </xs:keyref>
+        <xs:keyref name="Helyszin_kulcs" refer="Helyszin_kod">
+            <xs:selector xpath="Megallo"/>
+            <xs:field xpath="@helyszin"/>
+        </xs:keyref>
+
+        <!-- Az 1:1 kapcsolatok megvalósitása-->
+
+        <xs:unique name="Megallo_Helyszin_egyegy">
+            <xs:selector xpath="Megallo"/>
+            <xs:field xpath="@helyszin"/>
+        </xs:unique>
+        <xs:unique name="Sofor_Helyszin_egyegy">
+            <xs:selector xpath="Sofor"/>
+            <xs:field xpath="@lakhely"/>
+        </xs:unique>
+
+    </xs:element>
+</xs:schema>

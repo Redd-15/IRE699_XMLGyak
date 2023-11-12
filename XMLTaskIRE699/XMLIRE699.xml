@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MVK_database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="XMLSchemaIRE699.xsd">
+
+    <!--Sofőrök-->
+
+    <Sofor skod="1" lakhely="1">
+        <szul_ev>1980</szul_ev>
+        <tel_szam>+36301234566</tel_szam>
+        <tel_szam>+36701234566</tel_szam>
+        <nev>Nagy József</nev>
+    </Sofor>
+
+    <Sofor skod="2" lakhely="2">
+        <szul_ev>1976</szul_ev>
+        <tel_szam>+36301235466</tel_szam>
+        <tel_szam>+36401232366</tel_szam>
+        <nev>Kiss János</nev>
+    </Sofor>
+
+    <Sofor skod="3" lakhely="3">
+        <szul_ev>1999</szul_ev>
+        <tel_szam>+363012764566</tel_szam>
+        <tel_szam>+36301267566</tel_szam>
+        <nev>Adorján István</nev>
+    </Sofor>
+
+    <!--Mely sofőr mely buszt vezeti-->
+
+    <Vezeti sofor="1" busz="2"/>
+    <Vezeti sofor="2" busz="3"/>
+    <Vezeti sofor="3" busz="1"/>
+
+    <!--Buszok-->
+
+    <Busz bkod="1" jarat="3">
+        <tipus>
+            <marka>BYD</marka>
+            <uzemanyag>Elektromos</uzemanyag>
+        </tipus>
+        <ferohely>145</ferohely>
+        <rendszam>AABC-123</rendszam>
+        <uzemanyag_szint>80</uzemanyag_szint>
+        <fogyasztas>30</fogyasztas>
+    </Busz>
+
+    <Busz bkod="2" jarat="2">
+        <tipus>
+            <marka>BYD</marka>
+            <uzemanyag>Elektromos</uzemanyag>
+        </tipus>
+        <ferohely>145</ferohely>
+        <rendszam>AABC-133</rendszam>
+        <uzemanyag_szint>74</uzemanyag_szint>
+        <fogyasztas>30</fogyasztas>
+    </Busz>
+
+    <Busz bkod="3" jarat="1">
+        <tipus>
+            <marka>MAN</marka>
+            <uzemanyag>Dízel</uzemanyag>
+        </tipus>
+        <ferohely>110</ferohely>
+        <rendszam>AABC-143</rendszam>
+        <uzemanyag_szint>20</uzemanyag_szint>
+        <fogyasztas>12</fogyasztas>
+    </Busz>
+
+    <!--Járatok-->
+
+    <Jarat jkod="1" utvonal="3">
+        <indulasi_ido>10:00</indulasi_ido>
+    </Jarat>
+
+    <Jarat jkod="2" utvonal="2">
+        <indulasi_ido>15:00</indulasi_ido>
+    </Jarat>
+
+    <Jarat jkod="3" utvonal="1">
+        <indulasi_ido>18:20</indulasi_ido>
+    </Jarat>
+
+    <!--Útvonalak-->
+
+    <Utvonal utkod="1">
+        <utvonal_nev>1A</utvonal_nev>
+    </Utvonal>
+
+    <Utvonal utkod="2">
+        <utvonal_nev>2</utvonal_nev>
+    </Utvonal>
+
+    <Utvonal utkod="3">
+        <utvonal_nev>3A</utvonal_nev>
+    </Utvonal>
+
+    <!--Az egyes útvonalak megállói-->
+        <!--3A-->
+
+    <Megallas utvonal="3" megallo="3">
+        <tav_elo>10</tav_elo>
+        <sorszam>1</sorszam>
+    </Megallas>
+
+    <Megallas utvonal="3" megallo="1">
+        <tav_elo>5</tav_elo>
+        <sorszam>2</sorszam>
+    </Megallas>
+
+    <Megallas utvonal="3" megallo="4">
+        <tav_elo>1</tav_elo>
+        <sorszam>3</sorszam>
+    </Megallas>
+
+        <!--2-->
+
+    <Megallas utvonal="2" megallo="2">
+        <tav_elo>8</tav_elo>
+        <sorszam>1</sorszam>
+    </Megallas>
+
+    <Megallas utvonal="2" megallo="6">
+        <tav_elo>25</tav_elo>
+        <sorszam>2</sorszam>
+    </Megallas>
+
+    <Megallas utvonal="2" megallo="3">
+        <tav_elo>30</tav_elo>
+        <sorszam>3</sorszam>
+    </Megallas>
+
+        <!--1A-->
+
+    <Megallas utvonal="1" megallo="5">
+        <tav_elo>15</tav_elo>
+        <sorszam>1</sorszam>
+    </Megallas>
+
+    <Megallas utvonal="1" megallo="3">
+        <tav_elo>19</tav_elo>
+        <sorszam>2</sorszam>
+    </Megallas>
+    
+    <Megallas utvonal="1" megallo="2">
+        <tav_elo>8</tav_elo>
+        <sorszam>3</sorszam>
+    </Megallas>
+
+    <!--Megállók-->
+
+    <Megallo mkod="1" helyszin="4">
+        <fedett>I</fedett>
+        <m_ferohely>10</m_ferohely>
+    </Megallo>
+
+    <Megallo mkod="2" helyszin="9">
+        <fedett>N</fedett>
+        <m_ferohely>50</m_ferohely>
+    </Megallo>
+
+    <Megallo mkod="3" helyszin="6">
+        <fedett>N</fedett>
+        <m_ferohely>70</m_ferohely>
+    </Megallo>
+
+    <Megallo mkod="4" helyszin="5">
+        <fedett>I</fedett>
+        <m_ferohely>12</m_ferohely>
+    </Megallo>
+
+    <Megallo mkod="5" helyszin="7">
+        <fedett>I</fedett>
+        <m_ferohely>55</m_ferohely>
+    </Megallo>
+
+    <Megallo mkod="6" helyszin="8">
+        <fedett>N</fedett>
+        <m_ferohely>30</m_ferohely>
+    </Megallo>
+
+    <!--Helyszínek-->
+
+    <Helyszin hkod="1">
+        <varos>Miskolc</varos>
+        <utca>Ady Endre</utca>
+        <hazszam>10</hazszam>
+    </Helyszin>
+
+    <Helyszin hkod="2">
+        <varos>Mályi</varos>
+        <utca>Fő</utca>
+        <hazszam>17</hazszam>
+    </Helyszin>
+
+    <Helyszin hkod="3">
+        <varos>Miskolc</varos>
+        <utca>Széchenyi János</utca>
+        <hazszam>34</hazszam>
+    </Helyszin>
+
+    <Helyszin hkod="4">
+        <varos>Miskolc</varos>
+        <utca>Balaton</utca>
+        <hazszam>170</hazszam>
+    </Helyszin>
+
+    <Helyszin hkod="5">
+        <varos>Miskolc</varos>
+        <utca>Balaton</utca>
+        <hazszam>1</hazszam>
+    </Helyszin>
+
+    <Helyszin hkod="6">
+        <varos>Miskolc</varos>
+        <utca>Tiszai-PU</utca>
+        <hazszam>1</hazszam>
+    </Helyszin>
+
+    <Helyszin hkod="7">
+        <varos>Miskolc</varos>
+        <utca>Egyetem</utca>
+        <hazszam>1</hazszam>
+    </Helyszin>
+
+    <Helyszin hkod="8">
+        <varos>Miskolc</varos>
+        <utca>Reptéri</utca>
+        <hazszam>11</hazszam>
+    </Helyszin>
+
+    <Helyszin hkod="9">
+        <varos>Miskolc</varos>
+        <utca>Széchenyi János</utca>
+        <hazszam>1</hazszam>
+    </Helyszin>
+
+
+</MVK_database>

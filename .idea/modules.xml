@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IRE699_1025/IRE699_1025.iml" filepath="$PROJECT_DIR$/IRE699_1025/IRE699_1025.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IRE699_1108/IRE699_1108.iml" filepath="$PROJECT_DIR$/IRE699_1108/IRE699_1108.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IRE699_1115/IRE699_1115.iml" filepath="$PROJECT_DIR$/IRE699_1115/IRE699_1115.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/IRE699_XMLGyak.iml" filepath="$PROJECT_DIR$/.idea/IRE699_XMLGyak.iml" />
+    </modules>
+  </component>
+</project>

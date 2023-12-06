@@ -24,7 +24,8 @@ public class DOMModifyIRE699 {
             System.out.println("\n---------------------------------------------------Original document:---------------------------------------------------");
             reader.printDocument(doc);
 
-            System.out.println("\n-----------------------------------------------------Modifications:-----------------------------------------------------");            DomModifyDoc(doc);
+            System.out.println("\n-----------------------------------------------------Modifications:-----------------------------------------------------"); 
+            DomModifyDoc(doc);
 
             System.out.println("---------------------------------------------------Modified document:---------------------------------------------------");
             reader.printDocument(doc);

@@ -3,7 +3,12 @@ package hu.domparse.ire699;
 import org.w3c.dom.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 public class DOMReadIRE699 {
@@ -19,6 +24,8 @@ public class DOMReadIRE699 {
 
             DomRead reader = new DomRead();
             reader.printDocument(doc);
+            reader.writeToFile(doc, "XMLIRE699S.xml");
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -212,6 +219,24 @@ class DomRead {
         //Print root node End
         System.out.println("\n<" + root.getNodeName() + ">" );
 
+    }
+
+    public void writeToFile(Document doc, String file) {
+
+        try {
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            DOMSource source = new DOMSource(doc);
+            FileOutputStream output = new FileOutputStream(file);
+            StreamResult result = new StreamResult(output);
+
+            transformer.transform(source, result);
+
+            System.out.println("\nFile written!");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void printElementStartWithAttributes(Element element){

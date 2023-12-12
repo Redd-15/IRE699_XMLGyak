@@ -81,7 +81,7 @@ public class DOMWriteIRE699 {
 
             //Writing the DOM tree to console, then to file
             reader.printDocument(doc);
-            reader.writeToFile(doc, "XMLIRE6991.xml");
+            reader.writeToFile(doc, "XMLIRE6991.xml", true);
 
 
         } catch (Exception e) {

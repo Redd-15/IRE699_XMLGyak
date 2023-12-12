@@ -1,1 +1,177 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><MVK_database><Sofor lakhely="1" skod="1"><szul_ev>1980</szul_ev><nev>Nagy József</nev><tel_szam>+36301234566</tel_szam><tel_szam>+36701234566</tel_szam></Sofor><Sofor lakhely="2" skod="2"><szul_ev>1976</szul_ev><nev>Kiss János</nev><tel_szam>+36301235466</tel_szam><tel_szam>+36401232366</tel_szam></Sofor><Sofor lakhely="3" skod="3"><szul_ev>1999</szul_ev><nev>Adorján István</nev><tel_szam>+363012764566</tel_szam><tel_szam>+36301267566</tel_szam></Sofor><Vezeti busz="2" sofor="1"/><Vezeti busz="3" sofor="2"/><Vezeti busz="1" sofor="3"/><Busz bkod="1" jarat="3"><tipus><marka>BYD</marka><uzemanyag>Elektromos</uzemanyag></tipus><ferohely>145</ferohely><rendszam>AABC-123</rendszam><uzemanyag_szint>80</uzemanyag_szint><fogyasztas>30</fogyasztas></Busz><Busz bkod="2" jarat="2"><tipus><marka>BYD</marka><uzemanyag>Elektromos</uzemanyag></tipus><ferohely>145</ferohely><rendszam>AABC-133</rendszam><uzemanyag_szint>74</uzemanyag_szint><fogyasztas>30</fogyasztas></Busz><Busz bkod="3" jarat="1"><tipus><marka>MAN</marka><uzemanyag>Dízel</uzemanyag></tipus><ferohely>110</ferohely><rendszam>AABC-143</rendszam><uzemanyag_szint>20</uzemanyag_szint><fogyasztas>12</fogyasztas></Busz><Jarat jkod="1" utvonal="3"><indulasi_ido>10:00</indulasi_ido></Jarat><Jarat jkod="2" utvonal="2"><indulasi_ido>15:00</indulasi_ido></Jarat><Jarat jkod="3" utvonal="1"><indulasi_ido>18:20</indulasi_ido></Jarat><Utvonal utkod="1"><utvonal_nev>1A</utvonal_nev></Utvonal><Utvonal utkod="2"><utvonal_nev>2</utvonal_nev></Utvonal><Utvonal utkod="3"><utvonal_nev>3A</utvonal_nev></Utvonal><Megallas megallo="3" utvonal="3"><tav_elo>10</tav_elo><sorszam>1</sorszam></Megallas><Megallas megallo="1" utvonal="3"><tav_elo>5</tav_elo><sorszam>2</sorszam></Megallas><Megallas megallo="4" utvonal="3"><tav_elo>1</tav_elo><sorszam>3</sorszam></Megallas><Megallas megallo="2" utvonal="2"><tav_elo>8</tav_elo><sorszam>1</sorszam></Megallas><Megallas megallo="6" utvonal="2"><tav_elo>25</tav_elo><sorszam>2</sorszam></Megallas><Megallas megallo="3" utvonal="2"><tav_elo>30</tav_elo><sorszam>3</sorszam></Megallas><Megallas megallo="5" utvonal="1"><tav_elo>15</tav_elo><sorszam>1</sorszam></Megallas><Megallas megallo="3" utvonal="1"><tav_elo>19</tav_elo><sorszam>2</sorszam></Megallas><Megallas megallo="2" utvonal="1"><tav_elo>8</tav_elo><sorszam>3</sorszam></Megallas><Megallo helyszin="4" mkod="1"><fedett>I</fedett><m_ferohely>10</m_ferohely></Megallo><Megallo helyszin="9" mkod="2"><fedett>N</fedett><m_ferohely>50</m_ferohely></Megallo><Megallo helyszin="6" mkod="3"><fedett>N</fedett><m_ferohely>70</m_ferohely></Megallo><Megallo helyszin="5" mkod="4"><fedett>I</fedett><m_ferohely>12</m_ferohely></Megallo><Megallo helyszin="7" mkod="5"><fedett>I</fedett><m_ferohely>55</m_ferohely></Megallo><Megallo helyszin="8" mkod="6"><fedett>N</fedett><m_ferohely>30</m_ferohely></Megallo><Helyszin hkod="1"><varos>Miskolc</varos><utca>Ady Endre</utca><hazszam>10</hazszam></Helyszin><Helyszin hkod="2"><varos>Mályi</varos><utca>Fő</utca><hazszam>17</hazszam></Helyszin><Helyszin hkod="3"><varos>Miskolc</varos><utca>Széchenyi János</utca><hazszam>34</hazszam></Helyszin><Helyszin hkod="4"><varos>Miskolc</varos><utca>Balaton</utca><hazszam>170</hazszam></Helyszin><Helyszin hkod="5"><varos>Miskolc</varos><utca>Balaton</utca><hazszam>1</hazszam></Helyszin><Helyszin hkod="6"><varos>Miskolc</varos><utca>Tiszai-PU</utca><hazszam>1</hazszam></Helyszin><Helyszin hkod="7"><varos>Miskolc</varos><utca>Egyetem</utca><hazszam>1</hazszam></Helyszin><Helyszin hkod="8"><varos>Miskolc</varos><utca>Reptéri</utca><hazszam>11</hazszam></Helyszin><Helyszin hkod="9"><varos>Miskolc</varos><utca>Széchenyi János</utca><hazszam>1</hazszam></Helyszin></MVK_database>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MVK_database>
+  <Sofor lakhely="1" skod="1">
+    <szul_ev>1980</szul_ev>
+    <nev>Nagy József</nev>
+    <tel_szam>+36301234566</tel_szam>
+    <tel_szam>+36701234566</tel_szam>
+  </Sofor>
+  <Sofor lakhely="2" skod="2">
+    <szul_ev>1976</szul_ev>
+    <nev>Kiss János</nev>
+    <tel_szam>+36301235466</tel_szam>
+    <tel_szam>+36401232366</tel_szam>
+  </Sofor>
+  <Sofor lakhely="3" skod="3">
+    <szul_ev>1999</szul_ev>
+    <nev>Adorján István</nev>
+    <tel_szam>+363012764566</tel_szam>
+    <tel_szam>+36301267566</tel_szam>
+  </Sofor>
+  <Vezeti busz="2" sofor="1"/>
+  <Vezeti busz="3" sofor="2"/>
+  <Vezeti busz="1" sofor="3"/>
+  <Busz bkod="1" jarat="3">
+    <tipus>
+      <marka>BYD</marka>
+      <uzemanyag>Elektromos</uzemanyag>
+    </tipus>
+    <ferohely>145</ferohely>
+    <rendszam>AABC-123</rendszam>
+    <uzemanyag_szint>80</uzemanyag_szint>
+    <fogyasztas>30</fogyasztas>
+  </Busz>
+  <Busz bkod="2" jarat="2">
+    <tipus>
+      <marka>BYD</marka>
+      <uzemanyag>Elektromos</uzemanyag>
+    </tipus>
+    <ferohely>145</ferohely>
+    <rendszam>AABC-133</rendszam>
+    <uzemanyag_szint>74</uzemanyag_szint>
+    <fogyasztas>30</fogyasztas>
+  </Busz>
+  <Busz bkod="3" jarat="1">
+    <tipus>
+      <marka>MAN</marka>
+      <uzemanyag>Dízel</uzemanyag>
+    </tipus>
+    <ferohely>110</ferohely>
+    <rendszam>AABC-143</rendszam>
+    <uzemanyag_szint>20</uzemanyag_szint>
+    <fogyasztas>12</fogyasztas>
+  </Busz>
+  <Jarat jkod="1" utvonal="3">
+    <indulasi_ido>10:00</indulasi_ido>
+  </Jarat>
+  <Jarat jkod="2" utvonal="2">
+    <indulasi_ido>15:00</indulasi_ido>
+  </Jarat>
+  <Jarat jkod="3" utvonal="1">
+    <indulasi_ido>18:20</indulasi_ido>
+  </Jarat>
+  <Utvonal utkod="1">
+    <utvonal_nev>1A</utvonal_nev>
+  </Utvonal>
+  <Utvonal utkod="2">
+    <utvonal_nev>2</utvonal_nev>
+  </Utvonal>
+  <Utvonal utkod="3">
+    <utvonal_nev>3A</utvonal_nev>
+  </Utvonal>
+  <Megallas megallo="3" utvonal="3">
+    <tav_elo>10</tav_elo>
+    <sorszam>1</sorszam>
+  </Megallas>
+  <Megallas megallo="1" utvonal="3">
+    <tav_elo>5</tav_elo>
+    <sorszam>2</sorszam>
+  </Megallas>
+  <Megallas megallo="4" utvonal="3">
+    <tav_elo>1</tav_elo>
+    <sorszam>3</sorszam>
+  </Megallas>
+  <Megallas megallo="2" utvonal="2">
+    <tav_elo>8</tav_elo>
+    <sorszam>1</sorszam>
+  </Megallas>
+  <Megallas megallo="6" utvonal="2">
+    <tav_elo>25</tav_elo>
+    <sorszam>2</sorszam>
+  </Megallas>
+  <Megallas megallo="3" utvonal="2">
+    <tav_elo>30</tav_elo>
+    <sorszam>3</sorszam>
+  </Megallas>
+  <Megallas megallo="5" utvonal="1">
+    <tav_elo>15</tav_elo>
+    <sorszam>1</sorszam>
+  </Megallas>
+  <Megallas megallo="3" utvonal="1">
+    <tav_elo>19</tav_elo>
+    <sorszam>2</sorszam>
+  </Megallas>
+  <Megallas megallo="2" utvonal="1">
+    <tav_elo>8</tav_elo>
+    <sorszam>3</sorszam>
+  </Megallas>
+  <Megallo helyszin="4" mkod="1">
+    <fedett>I</fedett>
+    <m_ferohely>10</m_ferohely>
+  </Megallo>
+  <Megallo helyszin="9" mkod="2">
+    <fedett>N</fedett>
+    <m_ferohely>50</m_ferohely>
+  </Megallo>
+  <Megallo helyszin="6" mkod="3">
+    <fedett>N</fedett>
+    <m_ferohely>70</m_ferohely>
+  </Megallo>
+  <Megallo helyszin="5" mkod="4">
+    <fedett>I</fedett>
+    <m_ferohely>12</m_ferohely>
+  </Megallo>
+  <Megallo helyszin="7" mkod="5">
+    <fedett>I</fedett>
+    <m_ferohely>55</m_ferohely>
+  </Megallo>
+  <Megallo helyszin="8" mkod="6">
+    <fedett>N</fedett>
+    <m_ferohely>30</m_ferohely>
+  </Megallo>
+  <Helyszin hkod="1">
+    <varos>Miskolc</varos>
+    <utca>Ady Endre</utca>
+    <hazszam>10</hazszam>
+  </Helyszin>
+  <Helyszin hkod="2">
+    <varos>Mályi</varos>
+    <utca>Fő</utca>
+    <hazszam>17</hazszam>
+  </Helyszin>
+  <Helyszin hkod="3">
+    <varos>Miskolc</varos>
+    <utca>Széchenyi János</utca>
+    <hazszam>34</hazszam>
+  </Helyszin>
+  <Helyszin hkod="4">
+    <varos>Miskolc</varos>
+    <utca>Balaton</utca>
+    <hazszam>170</hazszam>
+  </Helyszin>
+  <Helyszin hkod="5">
+    <varos>Miskolc</varos>
+    <utca>Balaton</utca>
+    <hazszam>1</hazszam>
+  </Helyszin>
+  <Helyszin hkod="6">
+    <varos>Miskolc</varos>
+    <utca>Tiszai-PU</utca>
+    <hazszam>1</hazszam>
+  </Helyszin>
+  <Helyszin hkod="7">
+    <varos>Miskolc</varos>
+    <utca>Egyetem</utca>
+    <hazszam>1</hazszam>
+  </Helyszin>
+  <Helyszin hkod="8">
+    <varos>Miskolc</varos>
+    <utca>Reptéri</utca>
+    <hazszam>11</hazszam>
+  </Helyszin>
+  <Helyszin hkod="9">
+    <varos>Miskolc</varos>
+    <utca>Széchenyi János</utca>
+    <hazszam>1</hazszam>
+  </Helyszin>
+</MVK_database>
